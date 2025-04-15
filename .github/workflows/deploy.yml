@@ -10,8 +10,11 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.djauofb.mongodb.net
-      MONGODB_USERNAME: indrajith
-      MONGODB_PASSWORD: pLLXwaRzvpjFSJbk
+      # We can not hard-code the secret pw in workflow file. so have to find an alternative way to secure the password
+      # MONGODB_USERNAME: indrajith
+      # MONGODB_PASSWORD: pLLXwaRzvpjFSJbk
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{ secret.MONGODB_PASSWORD }}     
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
