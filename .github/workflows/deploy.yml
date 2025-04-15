@@ -8,7 +8,8 @@ env:
   MONGODB_DB_NAME: gb-dbase
 jobs:
   test:
-    environment:
+    environment: MONGODB_USERNAME
+    env:
       MONGODB_CLUSTER_ADDRESS: cluster0.djauofb.mongodb.net
       # We can not hard-code the secret pw in workflow file. so have to find an alternative way to secure the password
       # MONGODB_USERNAME: indrajith
