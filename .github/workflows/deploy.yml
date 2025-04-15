@@ -10,7 +10,7 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.djauofb.mongodb.net
-      MONGODB_USERNAME: maximilian
+      MONGODB_USERNAME: indrajith
       MONGODB_PASSWORD: pLLXwaRzvpjFSJbk
       PORT: 8080
     runs-on: ubuntu-latest
